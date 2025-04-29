@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Documentação do Projeto Linux</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            background-color: #e6f2ff; /* Azul claro para o fundo */
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #0066cc; /* Azul para o título principal */
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            color: #000000; /* Preto para subtítulos */
+            text-align: left;
+            margin-top: 30px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+        
+        .task-list {
+            text-align: left;
+            margin-left: 20px;
+        }
+        
+        .linux-logo {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Documentação do Projeto Linux</h1>
+        
+        <div class="linux-logo">
+            <img src="https://hermes.dio.me/articles/cover/d31216e7-884f-4b5f-91ec-a12bf597421b.png" alt="Logo do Linux" width="150">
+        </div>
+        
+        <h2>Etapa 1: Configuração do Servidor Web</h2>
+        <div class="task-list">
+            <p><strong>Tarefas:</strong></p>
+            <ol>
+                <li>Instalar o servidor Nginx.</li>
+                <li>Criar uma página HTML simples para ser exibida pelo servidor.</li>
+                <li>Configurar o Nginx para servir a página corretamente.</li>
+            </ol>
+        </div>
+        
+        <h2>Etapa 2: Monitoramento e Notificações</h2>
+        <div class="task-list">
+            <p><strong>Tarefas:</strong></p>
+            <ol>
+                <li>Criar um script em Bash ou Python para monitorar a disponibilidade do site.</li>
+                <li>O script deve:
+                    <ul>
+                        <li>Verificar se o site responde corretamente a uma requisição HTTP.</li>
+                        <li>Criar logs das verificações em /var/log/monitoramento.log.</li>
+                        <li>Enviar uma notificação via Discord, Telegram ou Slack se detectar indisponibilidade.</li>
+                    </ul>
+                </li>
+                <li>Configurar o script para rodar automaticamente a cada 1 minuto usando cron ou systemd timers.</li>
+            </ol>
+        </div>
+        
+        <h2>Etapa 3: Automação e Testes</h2>
+        <div class="task-list">
+            <p><strong>Tarefas:</strong></p>
+            <ol>
+                <li>Testar a implementação:
+                    <ul>
+                        <li>Verificar se o site está acessível via navegador.</li>
+                        <li>Parar o Nginx e verificar se o script detecta e envia alertas corretamente.</li>
+                    </ul>
+                </li>
+                <li>Criar uma documentação no GitHub explicando:
+                    <ul>
+                        <li>Como configurar o ambiente.</li>
+                        <li>Como instalar e configurar o servidor web.</li>
+                        <li>Como funciona o script de monitoramento.</li>
+                        <li>Como testar e validar a solução.</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>
