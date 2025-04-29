@@ -61,7 +61,6 @@ sudo nano /var/www/meusite/index.html
 ## Customização do meu site:
 ![image](https://github.com/user-attachments/assets/3554e9e7-de63-4e68-92f2-e002f259b77b)
 
-
 3. Configure o Nginx para servir o site
 ## Edite o arquivo de configuração:
 ```
@@ -70,7 +69,6 @@ sudo nano /etc/nginx/sites-available/meusite
 
 ## Conteúdo:
 ```
-nginx
 server {
     listen 80;
     server_name localhost;
@@ -196,7 +194,7 @@ tail -f /var/log/monitoramento.log
 
 ### Mensagem no Discord:
 
-![image](https://github.com/user-attachments/assets/fd72bd53-abd5-4824-8479-83260940ab70)
+![image](https://github.com/user-attachments/assets/deba5374-5735-4f6f-8384-38801db30580)
 
 2. Reinicie o Nginx
 ```
