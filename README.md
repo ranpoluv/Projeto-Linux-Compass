@@ -97,7 +97,8 @@ http://localhost
 # Etapa 3: Script de Monitoramento
 
 1. Crie o script
-```sudo nano /usr/local/bin/monitor_site.sh
+```
+sudo nano /usr/local/bin/monitor_site.sh
 ```
 
 ## Conteúdo:
