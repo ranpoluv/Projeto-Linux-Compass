@@ -11,7 +11,8 @@ wsl --install
 2. Instalar Ubuntu pela Microsoft Store
 - Abra a Microsoft Store.
 
-![image](https://github.com/user-attachments/assets/f1358ec1-fadc-4ced-8b22-88e2e6a18f85)
+![image](https://github.com/user-attachments/assets/0606b989-931d-486e-b586-f9a4ce66d374)
+
 - Cique em "Obter" ou "Instalar".
 - Aguarde o download e a instalação.
 
@@ -44,20 +45,22 @@ sudo mkdir -p /var/www/meusite
 sudo nano /var/www/meusite/index.html
 ```
 
-## Conteúdo:
+## Exemplo:
 ```
-html
 <!DOCTYPE html>
 <html>
 <head>
     <title>Meu Site</title>
 </head>
 <body>
-    <h1>🚀 Site Funcionando!</h1>
+    <h1> Site Funcionando!</h1>
     <p>Este é um teste de servidor Nginx.</p>
 </body>
 </html>
 ```
+## Customização do meu site:
+![image](https://github.com/user-attachments/assets/3554e9e7-de63-4e68-92f2-e002f259b77b)
+
 
 3. Configure o Nginx para servir o site
 ## Edite o arquivo de configuração:
@@ -124,6 +127,24 @@ else
     log_and_alert "❌ OFFLINE: $SITE_URL não está acessível!"
 fi
 ```
+### Comandos usados:
+```#!/bin/bash``` → Indica que o script deve ser executado usando o interpretador Bash.
+
+```SITE_URL="http://localhost"``` → Armazena a URL do site que será monitorado.
+
+```LOG_FILE="/var/log/monitoramento.log"``` → Define o caminho do arquivo de log onde as mensagens de monitoramento serão salvas (/var/log/monitoramento.log).
+
+``` DISCORD_WEBHOOK="URL_DO_SEU_WEBHOOK_DISCORD"``` → Armazena a URL do webhook do Discord para enviar notificações.
+
+``` [[ $1 == *"OFFLINE"* ]]``` → Verifica se a mensagem ($1) contém a palavra "OFFLINE". Se verdadeiro, usa curl para enviar uma mensagem ao Discord via webhook:
+
+```H "Content-Type``` → Define o cabeçalho HTTP para indicar que o conteúdo é JSON.
+
+```X POST``` → Especifica o método HTTP POST.
+
+```d "{\"content\":\"...\"}"``` → Corpo da requisição (mensagem formatada em JSON).
+
+```$DISCORD_WEBHOOK```→ URL do webhook onde a mensagem será enviada.
 
 2. Dê permissão de execução
 ```
@@ -163,10 +184,19 @@ tail -f /var/log/monitoramento.log
 ```
 sudo systemctl stop nginx
 ```
+
 ## Verifique se o script detecta e envia alerta:
 ```
 tail -f /var/log/monitoramento.log
 ```
+
+## No terminal:
+
+![image](https://github.com/user-attachments/assets/276d6609-9ad7-4dc5-88d9-a23ccb60f2c0)
+
+### Mensagem no Discord:
+
+![image](https://github.com/user-attachments/assets/fd72bd53-abd5-4824-8479-83260940ab70)
 
 2. Reinicie o Nginx
 ```
@@ -177,3 +207,6 @@ sudo systemctl start nginx
 ```
 tail -f /var/log/monitoramento.log
 ```
+## No terminal:
+
+![image](https://github.com/user-attachments/assets/abc1d681-1213-4199-919c-97fa5b049c81)
