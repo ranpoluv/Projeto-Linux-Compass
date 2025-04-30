@@ -109,6 +109,7 @@ sudo nano /usr/local/bin/monitor_site.sh
 SITE_URL="http://localhost"
 LOG_FILE="/var/log/monitoramento.log"
 DISCORD_WEBHOOK="URL_DO_SEU_WEBHOOK_DISCORD"
+CHECK_INTERVAL=60 # Verifica a cada 1 minuto
 
 # Função para log e notificação
 log_and_alert() {
@@ -118,12 +119,17 @@ log_and_alert() {
     fi
 }
 
+# Loop infinito
+while true; do
 # Verifica se o site está online
 if curl --output /dev/null --silent --head --fail --max-time 5 "$SITE_URL"; then
     log_and_alert "✅ ONLINE: $SITE_URL está respondendo."
 else
     log_and_alert "❌ OFFLINE: $SITE_URL não está acessível!"
 fi
+
+    sleep "$CHECK_INTERVAL"  # Espera 1 minuto agora
+done
 ```
 ### Comandos usados:
 ```#!/bin/bash``` → Indica que o script deve ser executado usando o interpretador Bash.
