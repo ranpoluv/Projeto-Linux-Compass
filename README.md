@@ -181,8 +181,6 @@ tail -f /var/log/monitoramento.log
 3. Clique em "Criar Webhook" ou "Novo Webhook". 
 4. Personalize o webhook e colocar em algum canal no seu servidor.
 
-![image](https://github.com/user-attachments/assets/61dd969e-4565-46c9-92c9-9cda467fe7d9)
-
 6. Copie a URL do webhook e substituia URL_DO_SEU_WEBHOOK_DISCORD no script de monitoramento.
 
 # Etapa 4: Testes e Validação
@@ -204,7 +202,7 @@ tail -f /var/log/monitoramento.log
 
 ### Mensagem no Discord:
 
-![image](https://github.com/user-attachments/assets/deba5374-5735-4f6f-8384-38801db30580)
+![image](https://github.com/user-attachments/assets/de52b24b-009f-4200-b292-5e5d4a3d3aff)
 
 2. Reinicie o Nginx
 ```
@@ -218,4 +216,3 @@ tail -f /var/log/monitoramento.log
 ## No terminal:
 
 ![image](https://github.com/user-attachments/assets/abc1d681-1213-4199-919c-97fa5b049c81)
-
