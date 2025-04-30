@@ -53,7 +53,7 @@ sudo nano /var/www/meusite/index.html
     <title>Meu Site</title>
 </head>
 <body>
-    <h1> Site Funcionando!</h1>
+    <h1>Site Funcionando!</h1>
     <p>Este é um teste de servidor Nginx.</p>
 </body>
 </html>
