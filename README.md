@@ -144,6 +144,7 @@ fi
 
 ```$DISCORD_WEBHOOK```→ URL do webhook onde a mensagem será enviada.
 
+7. Colar o URL no script de monitoramento.
 2. Dê permissão de execução
 ```
 sudo chmod +x /usr/local/bin/monitor_site.sh
@@ -174,6 +175,15 @@ sudo /usr/local/bin/monitor_site.sh
 ```
 tail -f /var/log/monitoramento.log
 ```
+## Como Criar um webhook no Discord
+1. Acessar as configurações do seu servidor no Discord. 
+2. Clicar na aba "Integrações". 
+3. Clique em "Criar Webhook" ou "Novo Webhook". 
+4. Personalize o webhook e colocar em algum canal no seu servidor.
+
+![image](https://github.com/user-attachments/assets/61dd969e-4565-46c9-92c9-9cda467fe7d9)
+
+6. Copie a URL do webhook e substituia URL_DO_SEU_WEBHOOK_DISCORD no script de monitoramento.
 
 # Etapa 4: Testes e Validação
 1. Simule uma falha
@@ -208,3 +218,4 @@ tail -f /var/log/monitoramento.log
 ## No terminal:
 
 ![image](https://github.com/user-attachments/assets/abc1d681-1213-4199-919c-97fa5b049c81)
+
