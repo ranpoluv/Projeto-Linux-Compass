@@ -202,7 +202,7 @@ tail -f /var/log/monitoramento.log
 
 ### Mensagem no Discord:
 
-![image](https://github.com/user-attachments/assets/de52b24b-009f-4200-b292-5e5d4a3d3aff)
+![image](https://github.com/user-attachments/assets/5c7ca1f0-ada1-4ae8-9280-bfc6d693399f)
 
 2. Reinicie o Nginx
 ```
