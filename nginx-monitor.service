@@ -1,0 +1,13 @@
+[Unit]
+Description=Nginx Monitor Service
+After=nginx.service
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/monitor_site.sh
+Restart=always
+RestartSec=30s
+User=root
+
+[Install]
+WantedBy=multi-user.target
