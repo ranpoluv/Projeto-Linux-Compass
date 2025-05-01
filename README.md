@@ -134,24 +134,19 @@ fi
 done
 ```
 ### Comandos usados:
-```#!/bin/bash``` → Indica que o script deve ser executado usando o interpretador Bash.
+```SITE_URL```: Define a URL do site que será monitorado (neste caso, http://localhost).
 
-```SITE_URL="http://localhost"``` → Armazena a URL do site que será monitorado.
+```LOG_FILE```: Especifica o arquivo onde os logs serão armazenados (/var/log/monitoramento.log).
 
-```LOG_FILE="/var/log/monitoramento.log"``` → Define o caminho do arquivo de log onde as mensagens de monitoramento serão salvas (/var/log/monitoramento.log).
+```DISCORD_WEBHOOK```: Armazena a URL do webhook do Discord, usado para enviar notificações.
 
-``` DISCORD_WEBHOOK="URL_DO_SEU_WEBHOOK_DISCORD"``` → Armazena a URL do webhook do Discord para enviar notificações.
+```CHECK_INTERVAL```: Define o intervalo de verificação em segundos (60 segundos = 1 minuto).
 
-``` [[ $1 == *"OFFLINE"* ]]``` → Verifica se a mensagem ($1) contém a palavra "OFFLINE". Se verdadeiro, usa curl para enviar uma mensagem ao Discord via webhook:
+```log_and_alert```: Função que registra status (ONLINE/OFFLINE) no log e envia alerta no Discord apenas se OFFLINE.
 
-```H "Content-Type``` → Define o cabeçalho HTTP para indicar que o conteúdo é JSON.
+```while true```: Verifica o site repetidamente, usando curl. Se acessível → Loga "ONLINE". Se inacessível → Loga "OFFLINE" e notifica no Discord.
 
-```X POST``` → Especifica o método HTTP POST.
-
-```d "{\"content\":\"...\"}"``` → Corpo da requisição (mensagem formatada em JSON).
-
-```$DISCORD_WEBHOOK```→ URL do webhook onde a mensagem será enviada.
-
+Espera CHECK_INTERVAL antes de repetir.
 7. Colar o URL no script de monitoramento.
 2. Dê permissão de execução
 ```
