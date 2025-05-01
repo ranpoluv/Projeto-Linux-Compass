@@ -15,7 +15,11 @@ wsl --install
 
 - Cique em "Obter" ou "Instalar".
 - Aguarde o download e a instalação.
-
+- Abra o Powershell ou o Prompt de Comando no modo administrador e execute o seguinte comando.
+```
+wsl --install
+```
+- Para mais informações sobre a instalação: https://learn.microsoft.com/pt-br/windows/wsl/install
 # Etapa 1: Instalação do Nginx
 1. Instalar o Nginx
 ```
@@ -24,13 +28,13 @@ wsl --install
 
 2. Inicie e ative o serviço
 ```
-sudo systemctl start nginx
+sudo systemctl start nginx # ou sudo service nginx start
 sudo systemctl enable nginx
 ```
 
 3. Verifique se está rodando
 ```
-sudo systemctl status nginx
+sudo systemctl status nginx # ou sudo service nginx restart
 ```
 ✅ Se aparecer active (running), o Nginx está funcionando.
 
@@ -86,7 +90,7 @@ server {
 ```
 sudo ln -s /etc/nginx/sites-available/meusite /etc/nginx/sites-enabled/
 sudo nginx -t  # Teste a configuração
-sudo systemctl restart nginx
+sudo systemctl restart nginx # ou sudo service nginx restart
 ```
 
 5. Acesse o site
@@ -194,7 +198,7 @@ tail -f /var/log/monitoramento.log
 
 ## Pare o Nginx:
 ```
-sudo systemctl stop nginx
+sudo systemctl stop nginx # ou sudo service nginx stop
 ```
 
 ## Verifique se o script detecta e envia alerta:
@@ -212,7 +216,7 @@ tail -f /var/log/monitoramento.log
 
 2. Reinicie o Nginx
 ```
-sudo systemctl start nginx
+sudo systemctl start nginx # ou sudo service nginx start
 ```
 
 3. Verifique se o log registra o site online novamente
