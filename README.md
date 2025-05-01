@@ -15,11 +15,9 @@ wsl --install
 
 - Cique em "Obter" ou "Instalar".
 - Aguarde o download e a instalação.
-- Abra o Powershell ou o Prompt de Comando no modo administrador e execute o seguinte comando.
-```
-wsl --install
-```
+
 - Para mais informações sobre a instalação: https://learn.microsoft.com/pt-br/windows/wsl/install
+
 # Etapa 1: Instalação do Nginx
 1. Instalar o Nginx
 ```
