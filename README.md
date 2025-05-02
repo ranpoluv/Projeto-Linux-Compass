@@ -144,10 +144,10 @@ done
 
 ```log_and_alert```: Função que registra status (ONLINE/OFFLINE) no log e envia alerta no Discord apenas se OFFLINE.
 
-```while true```: Verifica o site repetidamente, usando curl. Se acessível → Loga "ONLINE". Se inacessível → Loga "OFFLINE" e notifica no Discord.
+```while true```: Verifica o site repetidamente, usando curl. Se acessível → Loga "ONLINE". Se inacessível → Loga "OFFLINE" e notifica no Discord. Espera CHECK_INTERVAL antes de repetir.
 
-Espera CHECK_INTERVAL antes de repetir.
 7. Colar o URL no script de monitoramento.
+
 2. Dê permissão de execução
 ```
 sudo chmod +x /usr/local/bin/monitor_site.sh
